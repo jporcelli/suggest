@@ -30,6 +30,7 @@ class Node:
 
 	def __str__(self):
 		return self.char
+		
 	def __repr__(self):
 		return self.__str__()
 
@@ -135,24 +136,14 @@ class Trie:
 #DEV ONLY
 if __name__ == '__main__':
 	#Test the Trie implementation
-
 	t = Trie()
 
 	with open('input.txt', 'rt') as f:
 		for line in f:
-			#print('Debug: ' + line)
 			t.insert( line.strip('\n ') )
 
 	print(t.getDescendents('par'))
 
-	""" Traversal - for debug
-	def f(root):
-		print(root.char)
-		for i in root.children.keys():
-			f(root.get_child(i))
-
-	f(t.root)
-	"""
 
 
 
